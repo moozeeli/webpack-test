@@ -1,8 +1,5 @@
 
-###  1、webpack 安装和基本使用。
-参考文档
-https://www.webpackjs.com/guides/getting-started/#%E5%9F%BA%E6%9C%AC%E5%AE%89%E8%A3%85
-
+###  1、webpack 最基本使用。
 
 >前提:创建项目目录，生成npm 配置文件 package.json
 
