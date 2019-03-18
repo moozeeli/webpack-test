@@ -1,6 +1,6 @@
 import _ from "lodash";
 import "./style.css";
-import logo from './logo.jpg'
+import logo from './img/logo.jpg'
 function component() {
     var element = document.createElement('div');    
     element.setAttribute("id","app");
@@ -9,7 +9,12 @@ function component() {
     // 将图像添加到我们现有的 div。
     var myIcon = new Image();
     myIcon.src = logo;
-    element.appendChild(myIcon);
+
+    var icon = document.createElement('span');
+    icon.setAttribute("class", "iconfont");
+    icon.innerHTML ="&#xe61c;"
+
+    element.appendChild(icon);
 
     return element;
 }

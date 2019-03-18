@@ -75,6 +75,7 @@ npm install --save-dev style-loader css-loader
 执行npm run build,
 浏览器打开index.html文件，使用元素查看器，查看 在head元素之间，动态添加了style元素（不是 link）
 
+#### 图片资源管理
 16. 加载图片,安装file-loader
 ```
 npm i -D file-loader
@@ -111,4 +112,38 @@ myIcon.src = logo;
 element.appendChild(myIcon);
 ```
 17. 执行npm run build,刷新页面，发现图片被编译后放入了/dist目录
+18. 测试在style.css中引入图片之后的编译结果。
 
+#### 字体资源管理
+19. 参考图片和样式资源管理，在webpack.config.js中配置字体（使用file-loader）
+```
+...
+ {
+    test:/\.(png|svg|jpg|gif)$/,
+    use:[
+        "file-loader"
+    ]
++ },{
++     test:/\.(eot|ttf|woff|woff2)$/,
++     use:[
++         "file-loader"
++     ]
++ }
+...
+
+```
+20. 在src目录下新建font目录，并防止iconfont字体文件
+21. 在style.css中使用@font-face 设置字体。
+style.css 中添加如下代码。
+```
+@font-face {
+    font-family: 'MyFont';
+    src: url('./font/iconfont.woff2') format('woff2'), + url('./font/iconfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.iconfont {
+    font-family: 'MyFont';
+}
+```
