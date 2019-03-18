@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./font/iconfont.woff2') format('woff2'), url('./font/iconfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.iconfont {
+    font-family: 'MyFont';
+    font-style: normal;
+}
+
+#app {
+    color: black;
+}
+
+.logo {
+    width: 400px;
+    height: 400px;
+    background-image: url(./img/logo.jpg);
+    background-size: cover;
+}
+
+#app .iconfont {
+    font-size: 30px;
+}
