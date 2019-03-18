@@ -6,7 +6,8 @@ const config  = {
     entry: './src/index.js',
     output: {
         filename: '[name].main.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
     },
     //  实现开发时的source-map,方便查看定位代码位置；
     devtool: "inline-source-map",    

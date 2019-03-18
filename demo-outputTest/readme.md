@@ -5,7 +5,7 @@
 2019年3月18日
 
 
-##### 管理输出
+#### 管理输出
 
 管理输出，主要是使用 html-webpack-plugin 自动生成 html；
 
@@ -18,7 +18,7 @@ npm i -D html-webpack-plugin
 3. 安装 并配置 clean-webpack-plugin
 
 
-##### 开发工具（方便开发时候使用的一些功能）
+#### 开发工具（方便开发时候使用的一些功能）
 
 4. 新建多个js,并在index.js中 import;
 ```
@@ -62,3 +62,22 @@ devtool: "inline-source-map"
 浏览器会自动打开微服务页面，地址默认为 localhost:8080;
 
 此时修改代码，webpack会自动编译，并且浏览器会自动刷新。
+
+#### 使用 webpack-dev-middleware
+
+9. 安装 webpack-dev-middleware 和express
+```
+npm i -D express webpack-dev-middleware
+```
+配置 webpack.config.js
+```
+    output: {
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist'),
++     publicPath: '/'
+    }
+```
+
+10. 在项目根目录下新增/server.js文件，具体内容，查看该文件；
+
+11. 直接执行 node server.js或 配置 script命令，都可以运行服务，浏览器不会自动刷新；
