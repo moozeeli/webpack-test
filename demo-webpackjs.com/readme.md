@@ -40,3 +40,75 @@ module.exports = {
     },
 ```
 11. 执行 npm run build
+
+
+
+### 资源管理
+12. 安装 style-loader css-loader
+```
+npm install --save-dev style-loader css-loader
+```
+13. 修改 webapck.config.js
+``` 
+ module.exports = {
+    entry: './src/index.js',
+    output: {
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'dist')
+    },
++   module: {
++     rules: [
++       {
++         test: /\.css$/,
++         use: [
++           'style-loader',
++           'css-loader'
++         ]
++       }
++     ]
++   }
+  };
+```
+14. 新增 style.css 文件,并在index.js中添加 import "./style.css"；
+15. 编译查看
+
+执行npm run build,
+浏览器打开index.html文件，使用元素查看器，查看 在head元素之间，动态添加了style元素（不是 link）
+
+16. 加载图片,安装file-loader
+```
+npm i -D file-loader
+```
+修改 webpack.config.js:
+```
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader'
+          ]
+        },
++       {
++         test: /\.(png|svg|jpg|gif)$/,
++         use: [
++           'file-loader'
++         ]
++       }
+      ]
+    }
+```
+在index.js中添加:
+```
+import MyImage from './my-image.png'
+```
+并在主逻辑中添加如下代码:
+```
+// 将图像添加到我们现有的 div。
+var myIcon = new Image();
+myIcon.src = logo;
+element.appendChild(myIcon);
+```
+17. 执行npm run build,刷新页面，发现图片被编译后放入了/dist目录
+
