@@ -1,0 +1,10 @@
+﻿body{
+    background: rgb(45, 50, 78);
+    margin: 0;
+    padding: 0;
+}
+p{
+    border:1px solid #ccc;
+    color:white;
+    padding:60px;
+}
