@@ -1,10 +1,18 @@
 ﻿body{
-    background: rgb(45, 50, 78);
-    margin: 0;
+    background: #282C34;
+    margin: 20px;
     padding: 0;
 }
 p{
-    border:1px solid #ccc;
-    color:white;
+    border:1px solid #aaa;
+    color:#aaa;
     padding:60px;
+}
+
+div.bg{
+    border:2px solid red;
+    background:url(bg.jpg) ;
+    overflow: hidden;    
+    width: 200px;
+    height: 200px;
 }

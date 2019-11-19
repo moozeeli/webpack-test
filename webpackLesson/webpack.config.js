@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry:"./src/index.js",
     output:{
-        filename:"[name][hash:5].js",
+        /* filename:"[name][hash:5].js", */
+        filename:"[name].js",
         path: path.resolve(__dirname,'dist')
     },
     devServer:{
@@ -13,12 +14,16 @@ module.exports = {
         open:true,
         hot:true, //开启HMR
     },
-    mode:'development',
+    mode:'development', // 默认会压缩打包后的js，配置此项后会显示未压缩代码
     module:{
         rules:[
             {
                 test:/.css$/,
                 loader:["style-loader","css-loader"]
+            },
+            {
+                test: /.jpg$/,
+                loader: ["file-loader"]
             }
         ]
     },
