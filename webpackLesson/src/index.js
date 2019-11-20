@@ -2,6 +2,7 @@
 /* 向js中引入css */
 import css from "./style/index.css";
 import imgUrl from "./style/myhead.jpg"
+import scssTest from "./style/common.scss";
 console.log(css);
 console.log(css.toString());
 let root = document.getElementById("root");

@@ -18,7 +18,11 @@ module.exports = {
     module:{
         rules:[
             {
-                test:/.css$/,
+                test:/\.scss$/,
+                use:["style-loader","css-loader","sass-loader"]
+            },
+            {
+                test:/\.css$/,
                 loader:[{
                     loader:"style-loader",
                     options:{
@@ -33,8 +37,9 @@ module.exports = {
                 }]
             },
             {
-                test: /.(jpg|png|gif|jpeg)$/,
+                test: /\.(jpg|png|gif|jpeg)$/,
                 loader: "file-loader",
+                // 这个配置项对应的loader 值只能是一个字符串，不能是数组
                 options:{
                     name:"[name]_[hash:5].[ext]", // 占位符 placeholder,查看 file-loader 文档
                     outputPath:'images/' // 配置输出目录
