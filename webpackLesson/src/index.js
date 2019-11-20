@@ -1,6 +1,7 @@
 ﻿
 /* 向js中引入css */
 import css from "./style/index.css";
+import imgUrl from "./style/myhead.jpg"
 console.log(css);
 console.log(css.toString());
 let root = document.getElementById("root");
@@ -13,7 +14,7 @@ div2.className = "bg";
 div2.innerHTML = "adsfasdf";
 
 let img = new Image();
-img.src = "./images/1.jpg";
+img.src = imgUrl;
 div.appendChild(img);
 
 
