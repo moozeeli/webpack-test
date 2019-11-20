@@ -19,7 +19,18 @@ module.exports = {
         rules:[
             {
                 test:/.css$/,
-                loader:["style-loader","css-loader"]
+                loader:[{
+                    loader:"style-loader",
+                    options:{
+                    }
+                },{
+                    loader:"css-loader",
+                    // css-loader的opitons
+                    options:{
+                        // import:false, // 禁用import
+                        sourceMap:true
+                    }
+                }]
             },
             {
                 test: /.jpg$/,
