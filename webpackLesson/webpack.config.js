@@ -33,8 +33,12 @@ module.exports = {
                 }]
             },
             {
-                test: /.jpg$/,
-                loader: ["file-loader"]
+                test: /.(jpg|png|gif|jpeg)$/,
+                loader: "file-loader",
+                options:{
+                    name:"[name]_[hash:5].[ext]", // 占位符 placeholder,查看 file-loader 文档
+                    outputPath:'images/' // 配置输出目录
+                }
             }
         ]
     },
