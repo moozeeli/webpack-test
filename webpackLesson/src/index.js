@@ -3,6 +3,9 @@
 import css from "./style/index.css";
 import imgUrl from "./style/myhead.jpg"
 import scssTest from "./style/common.scss";
+
+import text from "./text.txt";
+console.log(text);
 console.log(css);
 console.log(css.toString());
 let root = document.getElementById("root");

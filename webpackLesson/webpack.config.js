@@ -44,7 +44,12 @@ module.exports = {
                     name:"[name]_[hash:5].[ext]", // 占位符 placeholder,查看 file-loader 文档
                     outputPath:'images/' // 配置输出目录
                 }
-            }
+            },
+            {
+                test: /\.txt$/,
+                loader: ["file-loader", path.resolve("./test/index.js")],
+            },
+
         ]
     },
     plugins:[
