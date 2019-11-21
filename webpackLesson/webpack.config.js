@@ -19,7 +19,19 @@ module.exports = {
         rules:[
             {
                 test:/\.scss$/,
-                use:["style-loader","css-loader","sass-loader","postcss-loader"]
+                use:[{
+                        loader:"style-loader",
+                        options:{
+                            // sourceMap:true, // 这里会报错
+                        }
+                    },{
+                        loader:"css-loader",
+                        options:{
+                            modules:true,
+                            // 只针对css 开启了source-map
+                            sourceMap: true
+                        }
+                    },"sass-loader","postcss-loader"]
             },
             {
                 test:/\.css$/,

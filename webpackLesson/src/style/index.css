@@ -1,10 +1,7 @@
 ﻿body{
-    background: #282C34;
-    margin: 20px;
-    padding: 0;
+    height: 200vh;
 }
-p{
-    border:1px solid #aaa;
+.myp{
     color:#aaa;
     padding:60px;
 }
