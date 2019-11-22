@@ -11,6 +11,7 @@
     "autoprefixer": "^9.6.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.0.0",
+    "express": "^4.17.1",
     "extract-loader": "^3.1.0",
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
@@ -21,13 +22,15 @@
     "url-loader": "^2.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.6",
+    "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "server": "webpack-dev-server",
-    "watch": "webpack --watch"
+    "dev": "webpack-dev-server",
+    "watch": "webpack --watch",
+    "server": "node server.js"
   },
   "keywords": [],
   "author": "",
