@@ -1,12 +1,22 @@
 
-.sassTest{
-    border:1px solid yellow;
-    background: #aaa;
-    .p{
-        color:red;
-        font-size: 10px;
-        padding:0;
-        transform: translate(10px);
-        overflow: visible;
-    }
+body{
+    height: 200vh;
+}
+.imgBg{
+    border:2px solid blue;
+    background:url(bg.jpg) ;
+    overflow: hidden;    
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+}
+.myHead{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.myP:nth-of-type(odd){
+    color:red;
+    background-color: yellow;
 }
