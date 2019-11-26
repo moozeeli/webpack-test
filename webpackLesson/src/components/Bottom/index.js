@@ -1,4 +1,4 @@
-import CreateP from "../CreateP.js";
+import createNodeUtil from "../createNodeUtil";
 import style from "./style.scss";
 
 /**
@@ -8,8 +8,9 @@ import style from "./style.scss";
 console.log("style", style);
 
 export  function Bottom() {
-    let p = CreateP("this is bottom",'bottom');    
-    p.classList.add(style.bottom)
+    let bottom = createNodeUtil.createP("this is bottom",'bottom');    
+    bottom.classList.add(style.bottom)
     let root = document.querySelector("#root");
-    root.appendChild(p);    
+    root.appendChild(bottom);  
+    return bottom  
 }
