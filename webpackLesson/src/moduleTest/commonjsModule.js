@@ -1,0 +1,1 @@
+module.exports = { name: 'commonjsModuleName',age:"20" };
