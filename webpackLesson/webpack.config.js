@@ -1,5 +1,5 @@
 ﻿const path = require("path");
-const webpack = require("webpack");
+// const webpack = require("webpack");
 
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -18,12 +18,12 @@ module.exports = {
     devServer:{
         contentBase:"./dist",
         open:true, // 自动从默认浏览器打卡页面
-        hot:true, //开启HMR        
+        // hot:false, //开启HMR        
         // quiet: true, // 安静模式
-        overlay: { // 页面显示错误
-            warnings: true,
-            errors: true
-        }
+        // overlay: { // 页面显示错误
+        //     warnings: true,
+        //     errors: true
+        // }
     },
     mode:'development', // 默认会压缩打包后的js，配置此项后会显示未压缩代码
     module:{
@@ -75,10 +75,11 @@ module.exports = {
         ]
     },
     plugins:[        
-        new webpack.HotModuleReplacementPlugin(), // 热模块更新  
+        // new webpack.HotModuleReplacementPlugin(), // 热模块更新  
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template:"./src/index.html"
+            template:"./src/index.html", // 指定模版。
+            title:'hello'
         }),      
     ]
 }
