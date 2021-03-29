@@ -6,7 +6,7 @@ const webpack = require('webpack');
 
 const config  = {
     entry: {
-       app: './src/index.js'
+        app: './src/index.js'
     },
     output: {
         filename: '[name].main.js',
