@@ -1,8 +1,9 @@
 const path = require('path');
-const { optimize } = require('webpack');
-
 module.exports = {
-  entry: './src/index.js',
+  mode:'development',
+  entry: {
+    main:'./src/index.js',
+  },
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -11,4 +12,10 @@ module.exports = {
   // optimization:{
   //   usedExports: true,
   // } 
+  module:{
+    rules:[{
+      test:/.css/,
+      use:['style-loader','css-loader']
+    }]
+  }
 };
