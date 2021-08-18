@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
   "devDependencies": {
     "css-loader": "^5.2.7",
     "html-webpack-plugin": "^4.5.2",
@@ -15,10 +20,6 @@
   
   "dependencies": {
     "lodash-es": "^4.17.21"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
   },
   "author": "",
   "license": "ISC"
