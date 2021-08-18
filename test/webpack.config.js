@@ -5,17 +5,13 @@ module.exports = {
     main:'./src/index.js',
   },
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
-  mode:'production',
-  // optimization:{
-  //   usedExports: true,
-  // } 
   module:{
     rules:[{
-      test:/.css/,
-      use:['style-loader','css-loader']
+      test:/\.css$/,
+      use:[ 'style-loader', 'css-loader' ]
     }]
   }
 };

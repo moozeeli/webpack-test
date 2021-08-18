@@ -1,3 +1,4 @@
-import './style/base.css'
-
-alert(1)
+import './style/base.css';
+import {square} from "./math.js"
+console.log(square(2))
+console.log('index','index');
