@@ -3,25 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build0": "webpack --config-name demo0"
   },
+  "sideEffects": false,
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.7",
     "html-webpack-plugin": "^4.5.2",
     "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.4",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.8.0"
   },
-  
   "dependencies": {
     "lodash-es": "^4.17.21"
   },
   "author": "",
   "license": "ISC"
 }
-
